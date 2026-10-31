@@ -1,14 +1,20 @@
+/* =========================
+   Global
+   ========================= */
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
   color: #222;
   background: #ffffff;
   line-height: 1.7;
 }
+
 
 /* =========================
    Navigation
@@ -35,6 +41,7 @@ nav a:hover {
   color: #006eb6;
 }
 
+
 /* =========================
    Main content
    ========================= */
@@ -44,6 +51,7 @@ main {
   margin: 0 auto;
   padding: 70px 40px 100px;
 }
+
 
 /* =========================
    Homepage profile photo
@@ -59,9 +67,10 @@ main > img {
   margin-bottom: 30px;
 }
 
+
 /* =========================
-    Typography
-    ========================= */
+   Typography
+   ========================= */
 
 h1 {
   margin: 0 0 12px;
@@ -85,9 +94,10 @@ p {
   font-size: 17px;
 }
 
+
 /* =========================
-    Affiliation
-    ========================= */
+   Affiliation
+   ========================= */
 
 .affiliation {
   margin-top: 0;
@@ -95,9 +105,10 @@ p {
   line-height: 1.65;
 }
 
+
 /* =========================
-    Social and academic links
-    ========================= */
+   Social and academic links
+   ========================= */
 
 .social-links {
   display: flex;
@@ -129,9 +140,10 @@ p {
   color: #004f83 !important;
 }
 
+
 /* =========================
-    General links
-    ========================= */
+   General links
+   ========================= */
 
 a {
   color: #006eb6;
@@ -149,9 +161,10 @@ main a:hover {
   text-decoration: none;
 }
 
+
 /* =========================
-    Publications page
-    ========================= */
+   Publications page
+   ========================= */
 
 .publications-page {
   max-width: 1000px;
@@ -159,6 +172,11 @@ main a:hover {
 
 .publications-page > h1 {
   margin-bottom: 50px;
+}
+
+.publication-note {
+  color: #666;
+  font-size: 15px;
 }
 
 .publication-year {
@@ -174,9 +192,14 @@ main a:hover {
   border-bottom: 2px solid #006eb6;
 }
 
+
+/* =========================
+   Publication entries
+   ========================= */
+
 .publication-entry {
   display: grid;
-  grid-template-columns: 230px 1fr;
+  grid-template-columns: 230px minmax(0, 1fr);
   gap: 30px;
   align-items: start;
   padding: 25px 0 32px;
@@ -187,11 +210,12 @@ main a:hover {
   padding-top: 5px;
 }
 
-.publication-image {
-  width: 100%;
-}
 
-.publication-image img {
+/* =========================
+   Publication images
+   ========================= */
+
+.publication-entry > img.publication-image {
   display: block;
   width: 100%;
   height: 150px;
@@ -200,6 +224,25 @@ main a:hover {
   background: #ffffff;
   border: 1px solid #e1e1e1;
   border-radius: 6px;
+}
+
+
+/* =========================
+   Publications without images
+   ========================= */
+
+.publication-entry--text {
+  display: block;
+  max-width: 760px;
+}
+
+
+/* =========================
+   Publication information
+   ========================= */
+
+.publication-info {
+  min-width: 0;
 }
 
 .publication-info h3 {
@@ -230,6 +273,11 @@ main a:hover {
   font-style: normal;
 }
 
+
+/* =========================
+   Publication links
+   ========================= */
+
 .publication-links {
   display: flex;
   flex-wrap: wrap;
@@ -248,7 +296,9 @@ main a:hover {
   font-weight: 500;
   line-height: 1.4;
   text-decoration: none;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: background 0.15s ease,
+              border-color 0.15s ease,
+              color 0.15s ease;
 }
 
 .publication-links a:hover {
@@ -258,9 +308,10 @@ main a:hover {
   text-decoration: none;
 }
 
+
 /* =========================
-    Mobile
-    ========================= */
+   Mobile responsiveness
+   ========================= */
 
 @media (max-width: 650px) {
 
@@ -317,11 +368,9 @@ main a:hover {
     padding: 22px 0 30px;
   }
 
-  .publication-image {
+  .publication-entry > img.publication-image {
+    width: 100%;
     max-width: 360px;
-  }
-
-  .publication-image img {
     height: auto;
     max-height: 220px;
   }
@@ -335,6 +384,7 @@ main a:hover {
   .publication-award {
     font-size: 15px;
   }
+
   .publication-award a {
     color: inherit;
     text-decoration: none;
@@ -343,8 +393,5 @@ main a:hover {
   .publication-award a:hover {
     text-decoration: underline;
   }
-}
 
-/* Initial draft: publication thumbnails can be added after review. */
-.publication-entry--text { display: block; max-width: 760px; }
-.publication-note { color: #666; font-size: 15px; }
+}
