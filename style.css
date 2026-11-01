@@ -26,6 +26,8 @@ nav {
   padding: 28px 40px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 32px;
   border-bottom: 1px solid #eeeeee;
 }
@@ -35,6 +37,7 @@ nav a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -159,6 +162,24 @@ main a:hover {
 
 .social-links a:hover {
   text-decoration: none;
+}
+
+
+/* =========================
+   Homepage
+   ========================= */
+
+.home-section h2 {
+  margin-top: 48px;
+}
+
+.home-section p {
+  max-width: 760px;
+}
+
+.research-interests {
+  color: #444;
+  line-height: 1.9;
 }
 
 
@@ -310,6 +331,95 @@ main a:hover {
 
 
 /* =========================
+   Talks & Posters page
+   ========================= */
+
+.talks-page {
+  max-width: 900px;
+}
+
+.talks-page > h1 {
+  margin-bottom: 50px;
+}
+
+.talk-year {
+  margin-bottom: 60px;
+}
+
+.talk-entry {
+  padding: 22px 0 28px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.talk-entry:first-of-type {
+  padding-top: 5px;
+}
+
+.talk-entry h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 650;
+  color: #222;
+}
+
+.talk-authors,
+.talk-venue,
+.talk-type {
+  max-width: 760px;
+  margin: 5px 0;
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+
+.talk-venue {
+  color: #555;
+  font-style: italic;
+}
+
+.talk-type {
+  color: #555;
+  font-size: 14.5px;
+}
+
+
+/* =========================
+   Academic Service page
+   ========================= */
+
+.service-page {
+  max-width: 900px;
+}
+
+.service-page > h1 {
+  margin-bottom: 45px;
+}
+
+.service-section h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #006eb6;
+}
+
+.service-intro {
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.service-list {
+  max-width: 760px;
+}
+
+.service-entry {
+  padding: 15px 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+
+/* =========================
    Mobile responsiveness
    ========================= */
 
@@ -318,7 +428,11 @@ main a:hover {
   nav {
     padding: 20px 24px;
     justify-content: center;
-    gap: 24px;
+    gap: 12px 20px;
+  }
+
+  nav a {
+    font-size: 14px;
   }
 
   main {
@@ -350,11 +464,13 @@ main a:hover {
     font-size: 22px;
   }
 
-  .publications-page > h1 {
+  .publications-page > h1,
+  .talks-page > h1 {
     margin-bottom: 40px;
   }
 
-  .publication-year {
+  .publication-year,
+  .talk-year {
     margin-bottom: 50px;
   }
 
@@ -375,13 +491,16 @@ main a:hover {
     max-height: 220px;
   }
 
-  .publication-info h3 {
+  .publication-info h3,
+  .talk-entry h3 {
     font-size: 18px;
   }
 
   .publication-authors,
   .publication-venue,
-  .publication-award {
+  .publication-award,
+  .talk-authors,
+  .talk-venue {
     font-size: 15px;
   }
 
@@ -392,6 +511,10 @@ main a:hover {
 
   .publication-award a:hover {
     text-decoration: underline;
+  }
+
+  .service-entry {
+    font-size: 16px;
   }
 
 }
